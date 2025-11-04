@@ -1,0 +1,22 @@
+variant: fcos
+version: 1.5.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPtIPWAmBvPEjAfUsEPuhb/PPAScKnnw/GIu893Pxuwp
+storage:
+  luks:
+    - name: root
+      device: /dev/disk/by-partlabel/root
+      clevis:
+        tang:
+          - url: http://192.168.9.176:80
+            thumbprint: 20fxsy2smQ0jspZ1-sZJw04wje3stUIGca2et4HWlpo
+      wipe_volume: true
+  filesystems:
+    - device: /dev/mapper/root
+      format: xfs
+      path: /
+      label: root
+      wipe_filesystem: true

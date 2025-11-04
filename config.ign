@@ -28,7 +28,7 @@
           "tang": [
             {
               "thumbprint": "20fxsy2smQ0jspZ1-sZJw04wje3stUIGca2et4HWlpo",
-              "url": "http://192.168.9.176:7500"
+              "url": "http://192.168.9.176:80"
             }
           ]
         },
